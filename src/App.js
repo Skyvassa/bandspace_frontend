@@ -4,25 +4,33 @@ import './App.css';
 import { Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+// NEED TO ENTER MORE INFO THERE.
+    }
+  }
+  render() {
+    return (
+      <div className="App">
+        <header>
+        <h1>Bandspace</h1>
+          <nav>
+            <ul>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/signup'>Signup</Link></li>
+              <li><Link to='/login'>Log In</Link></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <p>Welcome to Bandspace...2~!</p>
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
