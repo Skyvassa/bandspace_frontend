@@ -7,6 +7,7 @@ import axios from 'axios';
 import Home from './Components/Home/Home';
 import Bands from './Components/Bands/Bands';
 import About from './Components/About/About';
+import UserProfile from './Components/UserProfile/UserProfile';
 // import UserProfile from './Components/UserProfile/UserProfile';
 
 class App extends Component {
@@ -14,11 +15,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      // user: null,
-      // bands: null,
+      user: [],
+      bands: [],
 // NEED TO ENTER MORE INFO THERE.
     }
   }
+
+  async componentDidMount() {
+    const users = await axios('http://localhost:8000');
+    const bands = await axios(`http://localhost:8000/bands`);
+
+    this.setState({
+      user: users,
+      bands: bands,
+    })
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -29,6 +42,7 @@ class App extends Component {
               <li><Link to='/'>Home</Link></li>
               <li><Link to='/signup'>Signup</Link></li>
               <li><Link to='/login'>Log In</Link></li>
+              <li><Link to='profile'>Profile</Link></li>
               <li><Link to='/about'>About</Link></li>
             </ul>
           </nav>
@@ -37,9 +51,16 @@ class App extends Component {
           <Route exact path="/" render={() => 
             <Home />
           } />
+          <Route path="/profile" render={() =>
+            <UserProfile 
+              user={this.state.user}
+              bands={this.state.bands}
+            />
+          } />
           <Route path="/bands" render={() =>
             <Bands
-              band_name ={this.state.band_name}
+              bands = {this.state.bands}
+              // band_name ={this.state.band_name}
             />
           } />
           <Route path="/about" render={() => 
@@ -51,4 +72,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

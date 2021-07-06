@@ -5,8 +5,8 @@ import Band from '../Band/Band';
 const Bands = (props) => {
     return (
         <div>
-            {props.bands.map(bands =>
-                <Band />
+            {props.bands.map(band =>
+                <Band band={band}/>
             )}
         </div>
     )
