@@ -4,13 +4,18 @@ import './App.css';
 import { Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
+import Home from './Components/Home/Home';
 import Bands from './Components/Bands/Bands';
+import About from './Components/About/About';
+// import UserProfile from './Components/UserProfile/UserProfile';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      // user: null,
+      // bands: null,
 // NEED TO ENTER MORE INFO THERE.
     }
   }
@@ -29,11 +34,16 @@ class App extends Component {
           </nav>
         </header>
         <main>
-          <p>Welcome to Bandspace...2~!</p>
+          <Route exact path="/" render={() => 
+            <Home />
+          } />
           <Route path="/bands" render={() =>
             <Bands
               band_name ={this.state.band_name}
             />
+          } />
+          <Route path="/about" render={() => 
+            <About />
           } />
         </main>
       </div>
