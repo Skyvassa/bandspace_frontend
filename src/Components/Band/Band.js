@@ -4,7 +4,7 @@ import React from 'react';
 const Band = (props) => {
     return (
         <div>
-            <img src={props.band.photo}/>
+            <img src={props.band.photo} alt="band"/>
             <p>{props.band.band_name}</p>
             <p>{props.band.about}</p>
             <p>{props.band.genre}</p>

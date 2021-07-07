@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      user: [],
+      user: {},
       bands: [],
 // NEED TO ENTER MORE INFO THERE.
     }
@@ -27,7 +27,7 @@ class App extends Component {
 
     this.setState({
       user: users,
-      bands: bands,
+      bands: [bands],
     })
   }
 
@@ -42,7 +42,7 @@ class App extends Component {
               <li><Link to='/'>Home</Link></li>
               <li><Link to='/signup'>Signup</Link></li>
               <li><Link to='/login'>Log In</Link></li>
-              <li><Link to='profile'>Profile</Link></li>
+              <li><Link to='/profile'>Profile</Link></li>
               <li><Link to='/about'>About</Link></li>
             </ul>
           </nav>
@@ -60,7 +60,6 @@ class App extends Component {
           <Route path="/bands" render={() =>
             <Bands
               bands = {this.state.bands}
-              // band_name ={this.state.band_name}
             />
           } />
           <Route path="/about" render={() => 
