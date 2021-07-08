@@ -3,11 +3,13 @@ import './App.css';
 
 import { Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
+import { init, send,  } from 'emailjs-com';
 
 import Home from './Components/Home/Home';
 import Bands from './Components/Bands/Bands';
 import About from './Components/About/About';
 import UserProfile from './Components/UserProfile/UserProfile';
+import Support from './Components/Support/Support'
 // import UserProfile from './Components/UserProfile/UserProfile';
 
 class App extends Component {
