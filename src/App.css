@@ -1,11 +1,12 @@
 body {
   margin: 2% 10%;
   background: #6a88c6;
-  /* background-image: url('../src/images/fireworks.jpeg');
+  background-image: url('../src/images/Band\ Photo\ 1.png');
   background-position: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  max-height: 80%; */
+  max-height: 80%;
+  color: white;
 }
 
 a {

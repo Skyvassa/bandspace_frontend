@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import './App.css';
 
 import { Route, Link, withRouter } from 'react-router-dom';
 import axios from 'axios';
-import { init, send,  } from 'emailjs-com';
 
 import Home from './Components/Home/Home';
 import Bands from './Components/Bands/Bands';
 import About from './Components/About/About';
 import UserProfile from './Components/UserProfile/UserProfile';
 import Support from './Components/Support/Support'
+import Signup from './Components/Signup/Signup'
 // import UserProfile from './Components/UserProfile/UserProfile';
 
 class App extends Component {
@@ -45,7 +45,7 @@ class App extends Component {
               <li><Link to='/signup'>Signup</Link></li>
               <li><Link to='/login'>Log In</Link></li>
               <li><Link to='/profile'>Profile</Link></li>
-              <li><Link to='/about'>About</Link></li>
+
             </ul>
           </nav>
         </header>
@@ -67,7 +67,19 @@ class App extends Component {
           <Route path="/about" render={() => 
             <About />
           } />
+          <Route path='/support' render={() =>
+            <Support />
+          } />
+          <Route path="/signup" render={() => 
+            <Signup />
+          } />
         </main>
+        <footer>
+          <ul>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/support'>Support</Link></li>
+          </ul>
+        </footer>
       </div>
     );
   }

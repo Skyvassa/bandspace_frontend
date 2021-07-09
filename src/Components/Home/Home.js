@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div>
+        <div className="home">
             <p>Welcome to Bandspace...2~!</p>
         </div>
     )
