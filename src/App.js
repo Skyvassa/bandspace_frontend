@@ -8,8 +8,8 @@ import Home from './Components/Home/Home';
 import Bands from './Components/Bands/Bands';
 import About from './Components/About/About';
 import UserProfile from './Components/UserProfile/UserProfile';
-import Support from './Components/Support/Support'
-import Signup from './Components/Signup/Signup'
+import Support from './Components/Support/Support';
+import Signup from './Components/Signup/Signup';
 // import UserProfile from './Components/UserProfile/UserProfile';
 
 class App extends Component {
@@ -17,19 +17,40 @@ class App extends Component {
     super(props);
 
     this.state = {
-      user: {},
+      user: null,
       bands: [],
 // NEED TO ENTER MORE INFO THERE.
     }
   }
 
+  // getLikedBands = async id => {
+  //   const likedBands = await axios(`http://localhost:8000/profile/${id}/bands/`);
+
+  //   const likedBandIds = likedBands.data.map(band => band.fields.band);
+
+  //   return likedBandIds
+  // }
+
   async componentDidMount() {
-    const users = await axios('http://localhost:8000');
-    const bands = await axios(`http://localhost:8000/bands`);
+    const users = await axios('http://localhost:8000/');
+    console.log(users);
+
+    // const likedBandIds = await this.getLikedBands(users.data[0].pk);
+    // const collectedUser = { id: users.data[0].pk, ...users.data[0].fields, likedBands: likedBandIds};
+
+    const bands = await axios(`http://localhost:8000/bands/`);
+    console.log(bands);
+
+    const collectedUser = {id: users.data[0].pk, ...users.data[0].fields}
+
+    const collectedBands = bands.data.map(band => {
+      const collectedBands = {id: band.pk, ...band.fields}
+      return collectedBands
+    })
 
     this.setState({
-      user: users,
-      bands: [bands],
+      user: collectedUser,
+      bands: collectedBands,
     })
   }
 
