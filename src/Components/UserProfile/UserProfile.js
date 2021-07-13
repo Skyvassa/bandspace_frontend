@@ -9,9 +9,9 @@ const UserProfile = (props) => {
         return (
             <div>
                 <div>
-                    <p>Welcome to a user profile page</p>
-                    <h1>{props.user.username}</h1>
-                    <p>This is test text</p>
+                    <h1>Welcome {props.user.name}</h1>
+                    <img src={props.user.photo} alt="user"/>
+                    <p>{props.user.bio}</p>
                 </div>
                 {/* <Bands bands={userFavBands} updateBand={props.updateBand} /> */}
             </div>
@@ -23,3 +23,13 @@ const UserProfile = (props) => {
 }
 
 export default UserProfile;
+
+// class User(models.Model):
+//     username = models.CharField(max_length=50)
+//     password = models.CharField(max_length=50)
+//     name = models.CharField(max_length=100)
+//     photo = models.TextField()
+//     bio = models.TextField()
+
+//     def __str__(self):
+//         return self.name

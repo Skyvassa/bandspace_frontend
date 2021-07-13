@@ -20,34 +20,34 @@ const Signup = (props) => {
                     type="textbox"
                     maxLength="50"
                     name="username"
-                    value={content}
-                    onchange={onChange}
+                    placeholder="username"
+                    onChange={onChange}
                 />
                     <input className='password'
                     type="password"
                     maxLength="50"
                     name="password"
                     value={content}
-                    onchange={onChange}
+                    onChange={onChange}
                 />
                     <input className='name'
                     type="textbox"
                     maxLength="100"
                     name="name"
                     value={content}
-                    onchange={onChange}
+                    onChange={onChange}
                 />
                     <input className='photo'
                     type="textbox"
                     name="photo"
                     value={content}
-                    onchange={onChange}
+                    onChange={onChange}
                 />
                     <input className='bio'
                     type="textbox"
                     name="username"
                     value={content}
-                    onchange={onChange}
+                    onChange={onChange}
                 />
                 <input
                     type="submit"
