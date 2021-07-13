@@ -10,7 +10,7 @@ const Signup = (props) => {
     });
 
     const onChange = evt => {
-        updateContent(evt.target.value)
+        updateContent({ ...content, [evt.target.name]: evt.target.value })
     }
     return (
         <div>
@@ -20,33 +20,33 @@ const Signup = (props) => {
                     type="textbox"
                     maxLength="50"
                     name="username"
-                    placeholder="username"
+                    value={content.username}
                     onChange={onChange}
                 />
                     <input className='password'
                     type="password"
                     maxLength="50"
                     name="password"
-                    value={content}
+                    value={content.password}
                     onChange={onChange}
                 />
                     <input className='name'
                     type="textbox"
                     maxLength="100"
                     name="name"
-                    value={content}
+                    value={content.name}
                     onChange={onChange}
                 />
                     <input className='photo'
                     type="textbox"
                     name="photo"
-                    value={content}
+                    value={content.photo}
                     onChange={onChange}
                 />
                     <input className='bio'
                     type="textbox"
-                    name="username"
-                    value={content}
+                    name="bio"
+                    value={content.bio}
                     onChange={onChange}
                 />
                 <input

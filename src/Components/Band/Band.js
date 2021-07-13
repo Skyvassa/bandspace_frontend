@@ -1,8 +1,8 @@
 import React from 'react';
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faHeartBroken } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { render } from '@testing-library/react';
+// import { faHeart } from "@fortawesome/free-solid-svg-icons";
+// import { faHeartBroken } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { render } from '@testing-library/react';
 // import './Band.css';
 
 const Band = (props) => {

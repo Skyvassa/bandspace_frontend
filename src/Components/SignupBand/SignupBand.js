@@ -10,7 +10,7 @@ const SignupBand = (props) => {
     });
 
     const onChange = evt => {
-        updateContent(evt.target.value)
+        updateContent({ ...content, [evt.target.name]: evt.target.value })
     }
     return (
         <div>
@@ -20,45 +20,45 @@ const SignupBand = (props) => {
                     type="textbox"
                     maxLength="50"
                     name="username"
-                    value={content}
+                    value={content.username}
                     onChange={onChange}
                 />
                     <input className='password'
                     type="password"
                     maxLength="50"
                     name="password"
-                    value={content}
+                    value={content.password}
                     onChange={onChange}
                 />
                     <input className='band_name'
                     type="textbox"
                     maxLength="100"
                     name="band_name"
-                    value={content}
+                    value={content.band_name}
                     onChange={onChange}
                 />
                     <input className='photo'
                     type="textbox"
                     name="photo"
-                    value={content}
+                    value={content.phot}
                     onChange={onChange}
                 />
                     <input className='about'
                     type="textbox"
                     name="about"
-                    value={content}
+                    value={content.about}
                     onChange={onChange}
                 />
                 <input className='genre'
                     type="textbox"
                     name="genre"
-                    value={content}
+                    value={content.genre}
                     onChange={onChange}
                 />
                 <input className='music_url'
                     type="textbox"
                     name="music_url"
-                    value={content}
+                    value={content.music_url}
                     onChange={onChange}
                 />
                 <input
