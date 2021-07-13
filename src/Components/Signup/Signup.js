@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Signup.css';
 
 const Signup = (props) => {
     const [content, updateContent] = useState({
@@ -15,43 +16,44 @@ const Signup = (props) => {
     return (
         <div>
             <h2>Signup Field</h2>
-            <form onSubmit={(evt) => props.createUser(evt, content)}>
-                <input className='username'
+            <form className="signup" onSubmit={(evt) => props.createUser(evt, content)}>
+                Username:<input className='username'
                     type="textbox"
                     maxLength="50"
                     name="username"
                     value={content.username}
                     onChange={onChange}
                 />
-                    <input className='password'
+                Password:<input className='password'
                     type="password"
                     maxLength="50"
                     name="password"
                     value={content.password}
                     onChange={onChange}
                 />
-                    <input className='name'
+                Name:<input className='name'
                     type="textbox"
                     maxLength="100"
                     name="name"
                     value={content.name}
                     onChange={onChange}
                 />
-                    <input className='photo'
+                Photo Url:<input className='photo'
                     type="textbox"
                     name="photo"
                     value={content.photo}
                     onChange={onChange}
                 />
-                    <input className='bio'
+                Bio:<input className='bio'
                     type="textbox"
                     name="bio"
                     value={content.bio}
                     onChange={onChange}
                 />
+                <br></br>
                 <input
                     type="submit"
-                    value="submit"
+                    value="Submit"
                 />
             </form>
         </div>

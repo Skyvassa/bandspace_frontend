@@ -6,30 +6,30 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 80%;
-  color: white;
+  color: #f3f3f8;
 }
 
 a {
-  color: black;
+  color: #f3f3f8;
   text-decoration: none;
 }
 
 a:hover {
-  color: white;
+  color: #000542;
   text-decoration: underline;
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: #f3f3f8;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  background: #874472;
+  background: #6a88c6;
   max-width: 225px;
   border: 1px solid #00001F;
 }
 
 ul {
-  background: #DF9594;
+  background: #6a88c6;
   border: 1px solid #00001f;
   list-style: none;
   display: flex;

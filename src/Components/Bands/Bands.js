@@ -7,13 +7,13 @@ import SignupBand from '../SignupBand/SignupBand';
 const Bands = (props) => {
     return (
         <div>
-            <h1><Link to ='/bandsignup'>Create A Band</Link></h1>
             {props.bands.map(band =>
                 <Band band={band} updateBand={props.updateBand}/>
             )}
             <Route path='/bandsignup' render ={() => 
             <SignupBand />
           } />
+            <h1><Link to ='/bandsignup'>Create A Band</Link></h1>
         </div>
     )
 }

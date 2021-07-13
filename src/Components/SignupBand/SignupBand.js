@@ -23,27 +23,27 @@ const SignupBand = (props) => {
                     value={content.username}
                     onChange={onChange}
                 />
-                    <input className='password'
+                <input className='password'
                     type="password"
                     maxLength="50"
                     name="password"
                     value={content.password}
                     onChange={onChange}
                 />
-                    <input className='band_name'
+                <input className='band_name'
                     type="textbox"
                     maxLength="100"
                     name="band_name"
                     value={content.band_name}
                     onChange={onChange}
                 />
-                    <input className='photo'
+                <input className='photo'
                     type="textbox"
                     name="photo"
                     value={content.phot}
                     onChange={onChange}
                 />
-                    <input className='about'
+                <input className='about'
                     type="textbox"
                     name="about"
                     value={content.about}

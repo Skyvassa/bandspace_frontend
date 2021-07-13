@@ -73,6 +73,22 @@ class App extends Component {
     })
   }
 
+  createUser = async (evt, userProfile) => {
+    evt.preventDefault();
+
+    const response = await axios.post(`http://localhost:8000/profile/${this.state.user.id}`, {data:userProfile});
+    const newUser = {id:response.data[0].pk, ...response.data[0].fields}
+
+    const users = this.state.users;
+
+    users.push(newUser);
+
+    this.setState({
+      users
+    })
+    this.props.history.push('/profile');
+  }
+
 
   render() {
     return (
