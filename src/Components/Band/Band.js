@@ -3,15 +3,15 @@ import React from 'react';
 // import { faHeartBroken } from '@fortawesome/free-solid-svg-icons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { render } from '@testing-library/react';
-// import './Band.css';
+import './Band.css';
 
 const Band = (props) => {
     return (
-        <div>
+        <div className="band-wrapper">
             <img src={props.band.photo} alt="band"/>
-            <p>{props.band.band_name}</p>
+            <h3>{props.band.band_name}</h3>
             <p>{props.band.about}</p>
-            <p>{props.band.genre}</p>
+            <p>Genre: {props.band.genre}</p>
             <a href={props.band.music_url} />
             <button onClick={() => props.updateBand(props.band.id)}>Like</button>
         </div>

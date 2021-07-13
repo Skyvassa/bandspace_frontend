@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './SignupBand.css'
 
 const SignupBand = (props) => {
     const [content, updateContent] = useState({
@@ -14,56 +15,57 @@ const SignupBand = (props) => {
     }
     return (
         <div>
-            <h2>Signup Field</h2>
-            <form onSubmit={(evt) => props.createUser(evt, content)}>
-                <input className='username'
+            <h2>Sign Up Field</h2>
+            <form className="signupband" onSubmit={(evt) => props.createUser(evt, content)}>
+                Username:<input className='username'
                     type="textbox"
                     maxLength="50"
                     name="username"
                     value={content.username}
                     onChange={onChange}
                 />
-                <input className='password'
+                Password:<input className='password'
                     type="password"
                     maxLength="50"
                     name="password"
                     value={content.password}
                     onChange={onChange}
                 />
-                <input className='band_name'
+                Band Name:<input className='band_name'
                     type="textbox"
                     maxLength="100"
                     name="band_name"
                     value={content.band_name}
                     onChange={onChange}
                 />
-                <input className='photo'
+                Photo Url:<input className='photo'
                     type="textbox"
                     name="photo"
                     value={content.phot}
                     onChange={onChange}
                 />
-                <input className='about'
+                About:<input className='about'
                     type="textbox"
                     name="about"
                     value={content.about}
                     onChange={onChange}
                 />
-                <input className='genre'
+                Genre:<input className='genre'
                     type="textbox"
                     name="genre"
                     value={content.genre}
                     onChange={onChange}
                 />
-                <input className='music_url'
+                Music Url:<input className='music_url'
                     type="textbox"
                     name="music_url"
                     value={content.music_url}
                     onChange={onChange}
                 />
+                <br></br>
                 <input
                     type="submit"
-                    value="submit"
+                    value="Submit"
                 />
             </form>
         </div>

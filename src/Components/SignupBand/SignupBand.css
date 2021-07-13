@@ -1,0 +1,4 @@
+.signupband {
+    display: flex;
+    flex-direction: column;
+}

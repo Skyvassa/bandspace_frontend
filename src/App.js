@@ -73,6 +73,21 @@ class App extends Component {
     })
   }
 
+  createBand = async (evt, bandContent) => {
+    evt.preventDefault();
+
+    const response = await axios.post(`http://localhost:8000/bands/${this.state.user.id}`, {data:bandContent});
+    const newBand = {id:response.data[0].pk, ...response.data[0].fields}
+
+    const bands = this.state.bands;
+    bands.push(newBand);
+
+    this.setState({
+      bands
+    })
+    this.props.history.push('/bands');
+  }
+
   createUser = async (evt, userProfile) => {
     evt.preventDefault();
 
@@ -98,7 +113,7 @@ class App extends Component {
           <nav>
             <ul>
               <li><Link to='/'>Home</Link></li>
-              <li><Link to='/signup'>Signup</Link></li>
+              <li><Link to='/signup'>Sign Up</Link></li>
               <li><Link to='/login'>Log In</Link></li>
               <li><Link to='/profile'>Profile</Link></li>
               <li><Link to ='/bands'>Bands</Link></li>
@@ -131,7 +146,7 @@ class App extends Component {
           <Route path="/signup" render={() => 
             <Signup />
           } />
-          <Route path='bandsignup' render ={() => 
+          <Route path='/bandsignup' render ={() => 
             <SignupBand />
           } />
         </main>
