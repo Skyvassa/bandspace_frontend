@@ -76,7 +76,7 @@ class App extends Component {
   createBand = async (evt, bandContent) => {
     evt.preventDefault();
 
-    const response = await axios.post(`http://localhost:8000/bands/${this.state.user.id}`, {data:bandContent});
+    const response = await axios.post(`http://localhost:8000/bands/${this.state.user.id}/`, {data:bandContent});
     const newBand = {id:response.data[0].pk, ...response.data[0].fields}
 
     const bands = this.state.bands;
@@ -91,7 +91,7 @@ class App extends Component {
   createUser = async (evt, userProfile) => {
     evt.preventDefault();
 
-    const response = await axios.post(`http://localhost:8000/profile/${this.state.user.id}`, {data:userProfile});
+    const response = await axios.post(`http://localhost:8000/profile/${this.state.user.id}/`, {data:userProfile});
     const newUser = {id:response.data[0].pk, ...response.data[0].fields}
 
     const users = this.state.users;
@@ -144,10 +144,10 @@ class App extends Component {
             <Support />
           } />
           <Route path="/signup" render={() => 
-            <Signup />
+            <Signup createUser={this.createUser}/>
           } />
           <Route path='/bandsignup' render ={() => 
-            <SignupBand />
+            <SignupBand createBand={this.createBand}/>
           } />
         </main>
         <footer>

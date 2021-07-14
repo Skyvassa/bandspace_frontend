@@ -16,7 +16,7 @@ const SignupBand = (props) => {
     return (
         <div>
             <h2>Sign Up Field</h2>
-            <form className="signupband" onSubmit={(evt) => props.createUser(evt, content)}>
+            <form className="signupband" onSubmit={(evt) => props.createBand(evt, content)}>
                 Username:<input className='username'
                     type="textbox"
                     maxLength="50"
