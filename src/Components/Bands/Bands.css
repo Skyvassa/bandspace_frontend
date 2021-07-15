@@ -4,3 +4,7 @@
     text-align: center;
     align-items: center;
 }
+
+.bands-wrapper button a{
+    color: #000542;
+}

@@ -4,8 +4,8 @@ import Bands from '../Bands/Bands';
 
 const UserProfile = (props) => {
     if (props.user) {
-        // const userFavBands = props.bands.filter(band => 
-        //     props.user.favBands.includes(band.id) && band)
+        const userFavBands = props.bands.filter(band => 
+            props.user.favBands.includes(band.id) && band)
         return (
             <div>
                 <div>
@@ -13,7 +13,7 @@ const UserProfile = (props) => {
                     <img src={props.user.photo} alt="user"/>
                     <p>{props.user.bio}</p>
                 </div>
-                {/* <Bands bands={userFavBands} updateBand={props.updateBand} /> */}
+                <Bands bands={userFavBands} updateBand={props.updateBand} />
             </div>
         )
             

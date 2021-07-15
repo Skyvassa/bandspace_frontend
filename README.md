@@ -32,4 +32,5 @@ If you want to use this format with your own set of questions:
 ## Contribution Guidelines
 * YouTube embed tutorial - https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
 * Setting up an Email form tutorial - https://dev.to/daliboru/how-to-send-emails-from-a-form-in-react-emailjs-27d1
+* Setting up text Field for email https://www.pluralsight.com/guides/how-to-use-multiline-text-area-in-reactjs
 * 

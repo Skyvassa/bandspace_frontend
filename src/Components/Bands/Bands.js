@@ -10,7 +10,10 @@ const Bands = (props) => {
             {props.bands.map(band =>
                 <Band band={band} updateBand={props.updateBand}/>
             )}
-            <h1><Link to ='/bandsignup'>Create A Band</Link></h1>
+            <button><Link to ='/bandsignup'>Create A Band</Link></button>
+            <Route path="/bandsignup" render={() => 
+            <SignupBand />
+            } />
         </div>
     )
 }
