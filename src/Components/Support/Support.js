@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { init, send,  } from 'emailjs-com';
+import './Support.css'
 
 const Support = () => {
     const [toSend, setToSend] = useState({
@@ -31,8 +32,10 @@ const Support = () => {
 
     return (
         <div>
-            <h1>Enter Support Ticket Below</h1>
-            <form onSubmit={onSubmit}>
+            <h1>Are you having issues? Please enter a Support request below and
+                a customer service specialist will be there to assist!
+            </h1>
+            <form className='support' onSubmit={onSubmit}>
                 <input
                     type='text'
                     name='from_name'
@@ -61,6 +64,7 @@ const Support = () => {
                     value={toSend.reply_to}
                     onChange={handleChange}
                 />
+                <br></br>
                 <button type="submit">Submit</button>
             </form>
         </div>

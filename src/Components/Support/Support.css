@@ -1,0 +1,8 @@
+.support {
+    display: flex;
+    flex-direction: column;
+}
+
+.support input {
+    margin-bottom: 15px;
+}

@@ -22,6 +22,7 @@ This is
 * React (JavaScript)
 * Django (Python)
 * EmailJS
+* Youtube Embed
 ## Installation Instructions / Getting Started
 If you want to use this format with your own set of questions:
 1. Please Fork and clone this project.
@@ -29,4 +30,6 @@ If you want to use this format with your own set of questions:
 3. You will also want to change the background image, used in the index.html file to setup a new theme for the game.
 4. Upload your updated trivia game!
 ## Contribution Guidelines
+* YouTube embed tutorial - https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
+* Setting up an Email form tutorial - https://dev.to/daliboru/how-to-send-emails-from-a-form-in-react-emailjs-27d1
 * 
