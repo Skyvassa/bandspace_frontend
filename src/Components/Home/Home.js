@@ -1,9 +1,9 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => {
     return (
         <div className="home">
-            <p>Welcome to Bandspace...2~!</p>
         </div>
     )
 }

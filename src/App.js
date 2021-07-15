@@ -92,7 +92,7 @@ class App extends Component {
     evt.preventDefault();
 
     const response = await axios.post(`http://localhost:8000/profile/${this.state.user.id}/`, {data:userProfile});
-    const newUser = {id:response.data[0].pk, ...response.data[0].fields}
+    const newUser = [{id:response.data[0].pk, ...response.data[0].fields}]
 
     const users = this.state.users;
 
@@ -109,10 +109,9 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-        <h1>BandSpace</h1>
+        <h1 className='homelink'><Link to= '/'>BandSpace</Link></h1>
           <nav>
             <ul>
-              <li><Link to='/'>Home</Link></li>
               <li><Link to='/signup'>Sign Up</Link></li>
               <li><Link to='/login'>Log In</Link></li>
               <li><Link to='/profile'>Profile</Link></li>
@@ -150,7 +149,7 @@ class App extends Component {
             <SignupBand createBand={this.createBand}/>
           } />
         </main>
-        <footer>
+        <footer className='footer'>
           <ul>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/support'>Support</Link></li>

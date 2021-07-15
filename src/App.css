@@ -1,11 +1,18 @@
+/* body {
+  background: #6a88c6;
+  font-family: 'Squada One', cursive;
+} */
+
 body {
   margin: 2% 10%;
   background: #6a88c6;
   background-image: url('../src/images/Band\ Photo\ 1.png');
   background-position: cover;
-  background-size: cover;
+  background-size: auto fill;
   background-repeat: no-repeat;
+  background-position-x: center;
   max-height: 80%;
+  font-family: 'Squada One', cursive;
   color: #f3f3f8;
 }
 
@@ -46,4 +53,20 @@ ul li {
 img {
   max-width: 100px;
   max-height: 100px;
+}
+
+.homelink a:hover {
+  color: #f3f3f8;
+  text-decoration: none;
+}
+
+
+.footer {
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 60px;
+  padding-left: 90px;
+  padding-right: 90px;
 }

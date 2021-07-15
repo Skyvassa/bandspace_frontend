@@ -3,11 +3,11 @@ import './SignupBand.css'
 
 const SignupBand = (props) => {
     const [content, updateContent] = useState({
-        username: '',
-        password: '',
-        name: '',
+        band_name: '',
         photo: '',
-        bio: ''
+        about: '',
+        genre: '',
+        music_url: '',
     });
 
     const onChange = evt => {
@@ -17,20 +17,6 @@ const SignupBand = (props) => {
         <div>
             <h2>Sign Up Field</h2>
             <form className="signupband" onSubmit={(evt) => props.createBand(evt, content)}>
-                Username:<input className='username'
-                    type="textbox"
-                    maxLength="50"
-                    name="username"
-                    value={content.username}
-                    onChange={onChange}
-                />
-                Password:<input className='password'
-                    type="password"
-                    maxLength="50"
-                    name="password"
-                    value={content.password}
-                    onChange={onChange}
-                />
                 Band Name:<input className='band_name'
                     type="textbox"
                     maxLength="100"
@@ -41,7 +27,7 @@ const SignupBand = (props) => {
                 Photo Url:<input className='photo'
                     type="textbox"
                     name="photo"
-                    value={content.phot}
+                    value={content.photo}
                     onChange={onChange}
                 />
                 About:<input className='about'
