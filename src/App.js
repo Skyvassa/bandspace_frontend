@@ -198,11 +198,11 @@ class App extends Component {
           <Route exact path='/messages' render ={() =>
             <Messages 
               messages={this.state.messages}
-              createPost={this.createPost}
+              createMessage={this.createMessage}
             />
           } />
           <Route path='/messages/new' render ={() =>
-            <MessagePost createPost={this.createMessage}/>
+            <MessagePost createMessage={this.createMessage}/>
           } />
         </main>
         <footer className='footer'>

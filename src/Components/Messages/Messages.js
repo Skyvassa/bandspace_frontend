@@ -17,7 +17,7 @@ const Messages = (props) => {
             )}
             <button><Link to ='/messages/new'>Crate a Post</Link></button>
             <Route path="/messages/new" render={() => 
-            <MessagePost/>
+            <MessagePost createMessage={props.createMessage}/>
             } />
         </div>
     )

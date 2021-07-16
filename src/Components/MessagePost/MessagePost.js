@@ -1,23 +1,21 @@
 import React, {useState} from 'react';
 
 const MessagePost = (props) => {
-    const [content, updateContent] = useState({
-        content: '',
-    });
+    const [content, updateContent] = useState("");
 
     const onChange = evt => {
-        updateContent({ ...content, [evt.target.name]: evt.target.value })
+        updateContent(evt.target.value)
     }
     return (
         <div>
             <h2>Type Your Post Here:</h2>
-            <form className="messagepost" onSubmit={(evt) => props.createPost(evt, content)}>
+            <form className="messagepost" onSubmit={(evt) => props.createMesssage(evt, content)}>
                 <textarea 
                     className='content'
                     type="textarea"
                     maxLength="200"
                     name="content"
-                    value={content.content}
+                    value={content}
                     onChange={onChange}
                 />
                 <br></br>

@@ -2,7 +2,7 @@
 ## Description
 This is 
 ## Brief Example
-![Screenshot of 1st Question](screenshot.png)
+![Screenshot of Home Page](screenshot.PNG)
 ## List of Features / User Stories
 * Start button to begin the game and reveal the questions and answers.
 * An active score tracker to follow the successes and misses of the answer submissions

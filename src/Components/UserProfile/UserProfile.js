@@ -16,11 +16,6 @@ const UserProfile = (props) => {
                     <img src={props.user.photo} alt="user"/>
                     <p>{props.user.bio}</p>
                 </div>
-                <button onClick={() => props.createMessage(props.message.id)}>Delete</button>
-                <Route path="/messages" render={() => 
-                <Messages 
-                />
-                } />
                 {/* <Bands bands={userFavBands} updateBand={props.updateBand} /> */}
             </div>
 
