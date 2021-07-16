@@ -46,4 +46,5 @@ If you want to utilize the BandSpace platform:
 * Setting up an Email form tutorial - https://dev.to/daliboru/how-to-send-emails-from-a-form-in-react-emailjs-27d1
 * Setting up text Field for email https://www.pluralsight.com/guides/how-to-use-multiline-text-area-in-reactjs 
 ## Special Thanks
-* GA Team: David, Casey, and Leo, for helping grant me a learning opportunity I never would have experienced otherwise. 
+* GA Team: David, Casey, and Leo, for helping grant me a learning opportunity I never would have experienced otherwise.
+* GA Classmates, for all of our struggles together keeping class so light and being so willing to help one another. I will miss working directly with you all!
