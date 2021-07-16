@@ -13,7 +13,6 @@ import Signup from './Components/Signup/Signup';
 import SignupBand from './Components/SignupBand/SignupBand';
 import Messages from './Components/Messages/Messages';
 import MessagePost from './Components/MessagePost/MessagePost'
-// import UserProfile from './Components/UserProfile/UserProfile';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +22,6 @@ class App extends Component {
       user: [],
       bands: [],
       messages: [],
-// NEED TO ENTER MORE INFO THERE.
     }
   }
 
@@ -38,9 +36,6 @@ class App extends Component {
   async componentDidMount() {
     const users = await axios('http://localhost:8000/');
     console.log(users);
-
-    // const likedBandIds = await this.getLikedBands(users.data[0].pk);
-    // const collectedUser = { id: users.data[0].pk, ...users.data[0].fields, likedBands: likedBandIds};
 
     const bands = await axios(`http://localhost:8000/bands/`);
     console.log(bands);

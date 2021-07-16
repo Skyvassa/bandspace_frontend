@@ -1,5 +1,4 @@
 import React from 'react';
-// import './BandProfile.css';
 
 const BandProfile = (props) => {
     return (
@@ -8,8 +7,5 @@ const BandProfile = (props) => {
         </div>
     )
 }
-
-// Should be a profile page with band information and a Youtube video of a particular
-// song at the bottom. Should also include an edit and delete button if possible.
 
 export default BandProfile;
