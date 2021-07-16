@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import Message from '../Message/Message';
 import MessagePost from '../MessagePost/MessagePost';
+import './Messages.css'
 
 const Messages = (props) => {
     console.log(props)
@@ -15,7 +16,8 @@ const Messages = (props) => {
                     deletemessage={props.deletemessage}
                 />
             )}
-            <button><Link to ='/messages/new'>Crate a Post</Link></button>
+            <br></br>
+            <button className='createpost'><Link to ='/messages/new'>Create a Post</Link></button>
             <Route path="/messages/new" render={() => 
             <MessagePost createMessage={props.createMessage}/>
             } />

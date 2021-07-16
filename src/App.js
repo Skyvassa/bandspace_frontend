@@ -158,7 +158,6 @@ class App extends Component {
           <nav>
             <ul>
               <li><Link to='/signup'>Sign Up</Link></li>
-              <li><Link to='/login'>Log In</Link></li>
               <li><Link to='/profile'>Profile</Link></li>
               <li><Link to ='/bands'>Bands</Link></li>
               <li><Link to='/messages'>Message Board</Link></li>
