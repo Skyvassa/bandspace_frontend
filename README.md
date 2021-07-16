@@ -4,10 +4,10 @@ This is BandSpace, a website acting as a dedicated music oriented social media p
 ### Backend Link
 https://github.com/Skyvassa/bandspace_backend
 ## Brief Example
-![Screenshot of Home Page](src\images\screenshot.PNG?raw=true)
+![screenshot of homepage](https://user-images.githubusercontent.com/82845166/125980276-99488d67-af18-4dbe-8145-415a83d07a54.PNG))
 ## Original WireFrame / ERD
-![WireFrame](src\images\WireFrame.png?raw=true)
-![ERD Image](src\images\ERD.png?raw=true)
+![WireFrame](https://user-images.githubusercontent.com/82845166/125980333-ca4b5ae2-9335-4e4c-b614-d480de7e80d2.png)
+![ERD](https://user-images.githubusercontent.com/82845166/125980351-7e756ed8-3984-47bd-b1b5-26788bffdaa8.png)
 ## List of Technologies Used
 * React (JavaScript)
 * Axios
