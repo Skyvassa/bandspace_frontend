@@ -4,15 +4,19 @@ This is BandSpace, a website acting as a dedicated music oriented social media p
 ### Backend Link
 https://github.com/Skyvassa/bandspace_backend
 ## Brief Example
-![Screenshot of Home Page](src\images\screenshot.PNG)
+![Screenshot of Home Page](src\images\screenshot.PNG?raw=true)
 ## Original WireFrame / ERD
-![WireFrame](src\images\WireFrame.png)
-![ERD Image](src\images\ERD.png)
+![WireFrame](src\images\WireFrame.png?raw=true)
+![ERD Image](src\images\ERD.png?raw=true)
 ## List of Technologies Used
 * React (JavaScript)
+* Axios
 * Django (Python)
+* Postgres
 * EmailJS
 * Youtube Embed
+* Coolors - Color Pallet Generator
+* Pexels - Free Image Resource
 ## Installation Instructions / Getting Started
 If you want to utilize the BandSpace platform:
 1. Please Fork and clone this project.
@@ -41,3 +45,5 @@ If you want to utilize the BandSpace platform:
 * YouTube embed tutorial - https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
 * Setting up an Email form tutorial - https://dev.to/daliboru/how-to-send-emails-from-a-form-in-react-emailjs-27d1
 * Setting up text Field for email https://www.pluralsight.com/guides/how-to-use-multiline-text-area-in-reactjs 
+## Special Thanks
+* GA Team: David, Casey, and Leo, for helping grant me a learning opportunity I never would have experienced otherwise. 
