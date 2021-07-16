@@ -8,7 +8,7 @@ const Band = (props) => {
             <h3>{props.band.band_name}</h3>
             <p>{props.band.about}</p>
             <p>Genre: {props.band.genre}</p>
-            <a href={props.band.music_url} />
+            <p>{props.band.music_url}</p>
             <button onClick={() => props.updateBand(props.band.id)}>Like</button>
         </div>
     )
