@@ -1,11 +1,14 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import Messages from '../Messages/Messages'
 import Bands from '../Bands/Bands';
 // import './UserProfile.css';
 
 const UserProfile = (props) => {
     if (props.user) {
-        const userFavBands = props.bands.filter(band => 
-            props.user.favBands.includes(band.id) && band)
+        // const userFavBands = props.bands.filter(band => 
+        //     props.user.likedbands.includes(band.id) && band)
+        console.log(props)
         return (
             <div>
                 <div>
@@ -13,8 +16,14 @@ const UserProfile = (props) => {
                     <img src={props.user.photo} alt="user"/>
                     <p>{props.user.bio}</p>
                 </div>
-                <Bands bands={userFavBands} updateBand={props.updateBand} />
+                <button onClick={() => props.createMessage(props.message.id)}>Delete</button>
+                <Route path="/messages" render={() => 
+                <Messages 
+                />
+                } />
+                {/* <Bands bands={userFavBands} updateBand={props.updateBand} /> */}
             </div>
+
         )
             
     } else {

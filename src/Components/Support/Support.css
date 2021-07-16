@@ -1,12 +1,3 @@
-.support {
-    display: flex;
-    flex-direction: column;
-}
-
-.support input {
-    margin-bottom: 15px;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -16,5 +7,26 @@ main {
     padding: 5px;
     margin: 25px auto;
     background-color: #6a88c6;
-    /* width: 50%; */
+    width: 75%;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support input {
+    margin-bottom: 15px;
+}
+
+.support textarea {
+    resize: none;
+}
+
+.support button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100px;    
 }

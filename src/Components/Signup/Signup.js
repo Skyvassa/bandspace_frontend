@@ -15,7 +15,7 @@ const Signup = (props) => {
     }
     return (
         <div>
-            <h2>Signup Field</h2>
+            <h2>User Sign Up Field</h2>
             <form className="signup" onSubmit={(evt) => props.createUser(evt, content)}>
                 Username:<input className='username'
                     type="textbox"

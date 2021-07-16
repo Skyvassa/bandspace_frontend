@@ -18,6 +18,8 @@ This is
 ### Gold Game
 * An audio track that plays while a player is going through the questions, to provide a relaxing atmosphere.
 * Further feedback about if a player selected the correct question or not. 
+## Future Steps
+* Implementation of Spotify Searches for Band catalogs.
 ## List of Technologies Used
 * React (JavaScript)
 * Django (Python)

@@ -35,13 +35,13 @@ const Support = () => {
         <div>
             <main>
                 <h1> Are you having issues? Please enter a Support request below and
-                    a customer service specialist will be there to assist!
+                    a customer service specialist respond shortly!
                 </h1>
                 <form className='support' onSubmit={onSubmit}>
                     <input
                         type='text'
                         name='from_name'
-                        placeholder='from name'
+                        placeholder='Your Name'
                         value={toSend.from_name}
                         onChange={handleChange}
                     />
